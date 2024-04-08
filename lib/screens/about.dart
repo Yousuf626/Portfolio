@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/widgets/SideBar.dart';
+import 'package:flutter_application_1/widgets/sidebar/SideBar.dart';
 
 import '../widgets/spacebox.dart';
 
