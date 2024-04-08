@@ -34,12 +34,33 @@ class SideBarWidget extends StatelessWidget {
                     width: 1.0, // Set border width
                   ),
                 ),
-                child: const Column(
+                child:  Column(
                   children: [
                     SizedBox(
-                      height: 90,
+                      height: this.height! * 0.17,
                     ),
                     Text("data"),
+                    SizedBox(
+                      height: this.height! * 0.03,
+                    ),
+                    Text("data"),
+                    SizedBox(
+                      height: this.height! * 0.17,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+              color: Colors.black,
+                  border: Border.all(
+                    color: Colors.blue, // Set border color to black
+                    width: 1.0, // Set border width
+                  ),
+                ),
+                      child: Row(
+                        children: [
+                          // i am here
+                        ],
+                      ),
+                    )
                   ],
                   ),
           ),
