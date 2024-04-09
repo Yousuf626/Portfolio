@@ -22,6 +22,10 @@ class linksWidget extends StatelessWidget {
               height: this.height,
               imageName:
                   '${index + 1}', // Replace 'image_name' with the actual name of your image asset
+                   borderRadius: 10,
+                  widthDivideVal: 10,
+                   heightDivideVal: 12,
+                   paddingVal: 13.5,
             );
           }),
         ),
