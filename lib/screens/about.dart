@@ -1,7 +1,8 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/widgets/sidebar/SideBar.dart';
+import 'package:flutter_application_1/widgets/about_page/sidebar/SideBar.dart';
 
+import '../widgets/about_page/main_widget/main_box.dart';
 import '../widgets/spacebox.dart';
 
 class AboutPage extends StatelessWidget {
@@ -28,16 +29,10 @@ class AboutPage extends StatelessWidget {
             ),
             emptyBox(width: screenWidth * 0.025),
             SizedBox(
-              width: screenWidth * 0.50,
-              child: Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.black, // Set border color to black
-                  width: 1.0, // Set border width
-                ),
+              child: MainBox_Widget(
+                width: screenWidth * 0.50,
+                height: screenHeight,
               ),
-              // Add child widgets here if needed
-            ),
             ),
             emptyBox(width: screenWidth * 0.05),
 
