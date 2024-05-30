@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/about.dart';
+
+import 'testing.dart';
 void main() {
-  runApp(const MyApp());
+  runApp( MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -10,9 +12,13 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+  
+    return  MaterialApp(
       title: "About Page",
       home: AboutPage(),
+
+      
+      // home: GridContentWidget(items: items),
     );
   }
 }

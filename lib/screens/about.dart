@@ -21,7 +21,7 @@ class AboutPage extends StatelessWidget {
           children: [
             emptyBox(width: screenWidth * 0.05),
             SizedBox(
-              // width: screenWidth * 0.375,
+              
               child: SideBarWidget(
                 width: screenWidth * 0.375,
                 height: screenHeight,
@@ -37,6 +37,27 @@ class AboutPage extends StatelessWidget {
             emptyBox(width: screenWidth * 0.05),
 
           ],
+        // child: Row(
+        //   mainAxisSize: MainAxisSize.min,
+        //   children: [
+        //     emptyBox(width: screenWidth * 0.05),
+        //     SizedBox(
+              
+        //       child: SideBarWidget(
+        //         width: screenWidth * 0.375,
+        //         height: screenHeight,
+        //       )
+        //     ),
+        //     emptyBox(width: screenWidth * 0.025),
+        //     SizedBox(
+        //       child: MainBox_Widget(
+        //         width: screenWidth * 0.50,
+        //         height: screenHeight,
+        //       ),
+        //     ),
+        //     emptyBox(width: screenWidth * 0.05),
+
+        //   ],
         ),
       ),
     );

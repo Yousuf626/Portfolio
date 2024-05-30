@@ -28,8 +28,8 @@ class NavigationBar_widget extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                Icon(navItem.icon),
-                SizedBox(height: 8.0),
+                Icon(navItem.icon, size: 15,),
+                SizedBox(height: 3.0),
                 Text(navItem.title),
               ],
             ),
