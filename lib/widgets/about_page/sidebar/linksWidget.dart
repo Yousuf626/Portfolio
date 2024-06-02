@@ -11,7 +11,7 @@ class linksWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
       SizedBox(
-        width: this.width! * 0.25,
+        width: this.width! * 0.20,
       ),
       Expanded(
         child: Row(
@@ -26,7 +26,7 @@ class linksWidget extends StatelessWidget {
           }),
         ),
       ),
-      SizedBox(width: this.width! * 0.25),
+      SizedBox(width: this.width! * 0.20),
     ]);
   }
 }

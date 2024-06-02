@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/utils/Colors.dart';
 
 class RowItemWidget extends StatelessWidget {
   RowItemWidget({super.key, this.width, this.imageName,this.height});
@@ -11,14 +12,14 @@ class RowItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     // print(this.height);
     return Container(
-      width: this.width! / 10,
+      width: this.width! / 8,
       height: this.height!/12,
       decoration: BoxDecoration(
-        // color: Colors.white, // Change color to whatever you desire
-        border: Border.all(
-          color: Colors.black, // Set border color to black
-          width: 1.0, // Set border width
-        ),
+        color: ColorManager.backgroundColor, // Change color to whatever you desire
+        // border: Border.all(
+        //   color: Colors.black, // Set border color to black
+        //   width: 1.0, // Set border width
+        // ),
         borderRadius:
             BorderRadius.circular(10), // Adjust radius for rounded corners
       ),

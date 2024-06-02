@@ -45,19 +45,19 @@ class MainBox_Widget extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Expanded(
-              flex: 1,
-              child: Container(
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.black, // Set border color to black
-                    width: 1.0, // Set border width
-                  ),
-                ),
-              )),
+          // Expanded(
+          //     flex: 1,
+          //     child: Container(
+          //       decoration: BoxDecoration(
+          //         border: Border.all(
+          //           color: Colors.black, // Set border color to black
+          //           width: 1.0, // Set border width
+          //         ),
+          //       ),
+          //     )),
           Expanded(
               //main box is here
-              flex: 8,
+              flex: 1,
               child: Container(
                 child: Column(
                   children: [
@@ -138,16 +138,16 @@ class MainBox_Widget extends StatelessWidget {
                   ],
                 ),
               )),
-          Expanded(
-              flex: 1,
-              child: Container(
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.black, // Set border color to black
-                    width: 1.0, // Set border width
-                  ),
-                ),
-              )),
+          // Expanded(
+          //     flex: 1,
+          //     child: Container(
+          //       decoration: BoxDecoration(
+          //         border: Border.all(
+          //           color: Colors.black, // Set border color to black
+          //           width: 1.0, // Set border width
+          //         ),
+          //       ),
+          //     )),
         ],
       ),
     );

@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/widgets/about_page/sidebar/SideBar.dart';
 
+import '../utils/Colors.dart';
 import '../widgets/about_page/main_widget/main_box.dart';
 import '../widgets/spacebox.dart';
 
@@ -15,7 +16,8 @@ class AboutPage extends StatelessWidget {
   final screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      body: SafeArea(
+      body: Container(
+         color: ColorManager.backgroundColor,
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -23,57 +25,24 @@ class AboutPage extends StatelessWidget {
             SizedBox(
               
               child: SideBarWidget(
-                width: screenWidth * 0.375,
+                width: screenWidth * 0.275,
                 height: screenHeight,
               )
             ),
             emptyBox(width: screenWidth * 0.025),
             SizedBox(
               child: MainBox_Widget(
-                width: screenWidth * 0.50,
+                width: screenWidth * 0.60,
                 height: screenHeight,
               ),
             ),
             emptyBox(width: screenWidth * 0.05),
-
+        
           ],
-        // child: Row(
-        //   mainAxisSize: MainAxisSize.min,
-        //   children: [
-        //     emptyBox(width: screenWidth * 0.05),
-        //     SizedBox(
-              
-        //       child: SideBarWidget(
-        //         width: screenWidth * 0.375,
-        //         height: screenHeight,
-        //       )
-        //     ),
-        //     emptyBox(width: screenWidth * 0.025),
-        //     SizedBox(
-        //       child: MainBox_Widget(
-        //         width: screenWidth * 0.50,
-        //         height: screenHeight,
-        //       ),
-        //     ),
-        //     emptyBox(width: screenWidth * 0.05),
-
-        //   ],
+               
         ),
       ),
     );
   }
-  // Widget _buildContainer(double width) {
-  // return Expanded(
-  //   child: Container(
-  //     decoration: BoxDecoration(
-  //       border: Border.all(
-  //         color: Colors.black,
-  //         width: 1.0,
-  //       ),
-  //     ),
-  //     width: width,
-  //     // Add child widgets here if needed
-  //   ),
-  // );
-// }
+  
 }

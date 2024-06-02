@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class box_row_Widget extends StatelessWidget {
   final double width;
+  final String img_name;
   final double height;//max height is 0.52
-  const box_row_Widget({super.key,required this.width,required this.height});
+  const box_row_Widget({super.key,required this.width,required this.height,required this.img_name});
 
   @override
 Widget build(BuildContext context) {
@@ -25,7 +26,7 @@ Widget build(BuildContext context) {
                   ),
 
         child: Image.asset(
-          '1.png',
+          this.img_name,
         ),
       ),
       SizedBox(width: this.width * 0.05), // Add some space between the image and labels
@@ -35,9 +36,9 @@ Widget build(BuildContext context) {
         children: [
           // Top label
           Container(
-            width: this.width * 0.10,
+            width: this.width * 0.30,
             child: Text(
-              'Top Label',
+              'location',
               style: TextStyle(fontSize: 8), // Adjust the font size as needed
             ),
           ),
@@ -45,9 +46,9 @@ Widget build(BuildContext context) {
           SizedBox(height: this.height * 0.02),
           // Bottom label
           Container(
-            width: this.width * 0.15,
+            width: this.width * 0.40,
             child: Text(
-              'Bottom Label',
+              's.ali.22987@khi.iba.edu.pk',
               style: TextStyle(fontSize: 8), // Adjust the font size as needed
             ),
           ),

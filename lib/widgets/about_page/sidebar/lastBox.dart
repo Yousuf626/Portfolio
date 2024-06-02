@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/utils/Colors.dart';
 import 'package:flutter_application_1/widgets/about_page/sidebar/lastbox_row.dart';
 
 class lastbox_widget extends StatelessWidget {
@@ -17,7 +18,7 @@ const lastbox_widget({
         SizedBox(
           height: this.height * 0.03,
         ),
-        box_row_Widget(width: this.width, height: this.height,),
+        box_row_Widget(width: this.width, height: this.height,img_name: "1.png"),
         SizedBox(
           height: this.height * 0.03,
         ),
@@ -26,7 +27,7 @@ const lastbox_widget({
            decoration: BoxDecoration(
                     // color: Colors.red,
                     border: Border.all(
-                      color: Colors.blue, // Set border color to black
+                      color: ColorManager.backgroundColor1, // Set border color to black
                       width: 1.0, // Set border width
                     ),
                   ),
@@ -35,7 +36,7 @@ const lastbox_widget({
        SizedBox(
           height: this.height * 0.03,
         ),
-        box_row_Widget(width: this.width, height: this.height,),
+        box_row_Widget(width: this.width, height: this.height,img_name: "1.png"),
         SizedBox(
           height: this.height * 0.03,
         ),
@@ -44,7 +45,7 @@ const lastbox_widget({
            decoration: BoxDecoration(
                     // color: Colors.red,
                     border: Border.all(
-                      color: Colors.black, // Set border color to black
+                      color: ColorManager.backgroundColor1, // Set border color to black
                       width: 1.0, // Set border width
                     ),
                   ),
@@ -53,7 +54,7 @@ const lastbox_widget({
          SizedBox(
           height: this.height * 0.03,
         ),
-        box_row_Widget(width: this.width, height: this.height,),
+        box_row_Widget(width: this.width, height: this.height,img_name: "1.png"),
         SizedBox(
           height: this.height * 0.03,
         ),
@@ -62,7 +63,7 @@ const lastbox_widget({
            decoration: BoxDecoration(
                     // color: Colors.red,
                     border: Border.all(
-                      color: Colors.black, // Set border color to black
+                      color: ColorManager.backgroundColor1, // Set border color to black
                       width: 1.0, // Set border width
                     ),
                   ),
@@ -73,12 +74,12 @@ const lastbox_widget({
               Container(
   width: width * 0.50,
   height: height * 0.13, // Ensure this height is enough to accommodate the inner padding and text size.
-  decoration: BoxDecoration(
-    border: Border.all(
-      color: Colors.black,
-      width: 1.0,
-    ),
-  ),
+  // decoration: BoxDecoration(
+  //   border: Border.all(
+  //     color: Colors.black,
+  //     width: 1.0,
+  //   ),
+  // ),
       child: ElevatedButton(
         onPressed: () {},
         style: ElevatedButton.styleFrom(
@@ -93,7 +94,7 @@ const lastbox_widget({
         child: Ink(
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [Colors.blue, Colors.green], // Make sure these colors provide good contrast with white text.
+              colors: [ColorManager.btn_grad_1,ColorManager.btn_grad_1,ColorManager.btn_grad_1,ColorManager.btn_grad_1, ColorManager.btn_grad_2], // Make sure these colors provide good contrast with white text.
               begin: Alignment.centerLeft,
               end: Alignment.centerRight,
             ),
@@ -122,16 +123,6 @@ const lastbox_widget({
       ),
     ),
 
-          Container(
-          width: this.width * 0.50,
-           decoration: BoxDecoration(
-                    // color: Colors.red,
-                    border: Border.all(
-                      color: Colors.black, // Set border color to black
-                      width: 1.0, // Set border width
-                    ),
-                  ),
-        ),
       
       ],
     );
