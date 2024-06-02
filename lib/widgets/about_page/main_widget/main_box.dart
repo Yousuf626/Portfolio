@@ -4,6 +4,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_application_1/bloc/navigation_bloc.dart';
 import 'package:flutter_application_1/utils/Colors.dart';
+import 'package:flutter_application_1/widgets/CV/resumeBox.dart';
 import 'package:flutter_application_1/widgets/about_page/main_widget/completebox.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -163,6 +164,9 @@ class MainBox_Widget extends StatelessWidget {
             case NavBarItem.Home:
               content = finalBox(items: items);
               break;
+               case NavBarItem.CV:
+              content = ResumeBox(width:  this.width!);
+              break;
             default:
               content = Text("No content selected");
           }
@@ -198,7 +202,15 @@ class MainBox_Widget extends StatelessWidget {
                           ),
                         ),
                         Expanded(flex: 1, child: Container()),
-                        Expanded(flex: 18, child: content),
+                        Expanded(flex: 18, child: SingleChildScrollView(child: ConstrainedBox(
+                              constraints: BoxConstraints(
+                                // Setting minimum height to take at least the full viewport height
+                                minHeight: MediaQuery.of(context).size.height,
+                              ),
+                              child: IntrinsicHeight(
+                                child: content,
+                              ),
+                            ),)),
                       ],
                     ),
                   ),
