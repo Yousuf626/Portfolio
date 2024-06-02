@@ -18,7 +18,7 @@ const lastbox_widget({
         SizedBox(
           height: this.height * 0.03,
         ),
-        box_row_Widget(width: this.width, height: this.height,img_name: "1.png"),
+        box_row_Widget(width: this.width, height: this.height,icon: Icons.phone_android,TopLabel: "Phone",BottomLabel: "03360249719",),
         SizedBox(
           height: this.height * 0.03,
         ),
@@ -36,7 +36,7 @@ const lastbox_widget({
        SizedBox(
           height: this.height * 0.03,
         ),
-        box_row_Widget(width: this.width, height: this.height,img_name: "1.png"),
+        box_row_Widget(width: this.width, height: this.height,icon: Icons.email_outlined,TopLabel: "Email",BottomLabel: "s.ali.22987@khi.iba.edu.pk"),
         SizedBox(
           height: this.height * 0.03,
         ),
@@ -54,7 +54,7 @@ const lastbox_widget({
          SizedBox(
           height: this.height * 0.03,
         ),
-        box_row_Widget(width: this.width, height: this.height,img_name: "1.png"),
+        box_row_Widget(width: this.width, height: this.height,icon: Icons.location_on_outlined,TopLabel: "Location",BottomLabel: "Sindh,Karachi"),
         SizedBox(
           height: this.height * 0.03,
         ),
@@ -107,13 +107,13 @@ const lastbox_widget({
               mainAxisSize: MainAxisSize.min,
               children: [
                 Icon(
-                  Icons.image, 
+                  Icons.download_for_offline_outlined, 
                   color: Colors.white,
                   size: 16,
                   ),
                 SizedBox(width: 10),
                 Text(
-                  'Button Text',
+                  'Download CV',
                   style: TextStyle(fontSize: 10, color: Colors.white),
                 ),
               ],

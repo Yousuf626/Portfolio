@@ -9,6 +9,9 @@ class ColorManager {
   static Color underline = _hexToColor('#9eb8b9');
   static Color btn_grad_1 = _hexToColor('#ff9c1a');
   static Color btn_grad_2 = _hexToColor('#ec1b09');
+  static Color navbarColors1 = _hexToColor('#f7fbfd');
+  static Color grid_color1 = _hexToColor('#ffffb8');
+  static Color grid_color2 = _hexToColor('#e8f4f8');
 
   static Color _hexToColor(String hexColor) {
     String hex = hexColor.replaceAll('#', '');
