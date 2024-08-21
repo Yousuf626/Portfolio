@@ -27,7 +27,7 @@ class heading2 extends StatelessWidget {
             Icon(Icons.work_outline),
             SizedBox(width: MediaQuery.of(context).size.width * 0.008,),
             Text(
-              "Experience",
+              "Internship",
               style: TextStyle(
                 fontSize: 28, // Adjust the font size here
               ),

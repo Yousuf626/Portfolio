@@ -43,9 +43,11 @@ class ResumeBox extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Work Skill 1"),
-                      Text("Work Skill 2"),
-                      Text("Work Skill 1"),
+                      Text("React JS"),
+                      Text("Flutter"),
+                      Text("NodeJS"),
+                      Text("Godot Game Development"),
+                      Text("Programming Core in Java"),
       
                       
                       // Add more Text widgets as needed
@@ -56,8 +58,9 @@ class ResumeBox extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Soft Skill 1"),
-                      Text("Soft Skill 2"),
+                      Text("Teamwork"),
+                      Text("Problem-Solving"),
+                      Text("Communication"),
                       // Add more Text widgets as needed
                     ],
                   ),

@@ -40,7 +40,7 @@ class NavigationBar_widget extends StatelessWidget {
                   decoration: BoxDecoration(
                     gradient: isSelected
                       ? LinearGradient(colors: [ColorManager.btn_grad_1, ColorManager.btn_grad_1, ColorManager.btn_grad_2])
-                      : LinearGradient(colors: [Colors.black, Colors.black, Colors.black]),
+                      : LinearGradient(colors: [Colors.white]),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Container(

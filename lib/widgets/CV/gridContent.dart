@@ -13,29 +13,17 @@ class gridvalues extends StatelessWidget {
                 childAspectRatio: 2.5, // Adjust the aspect ratio as needed
                 children: <Widget>[
                    _buildResumeCard(
-                      'Software Development', '2020-2021', 'Moringa School',context),
+                      'O Levels', '2016-2018', 'Happy Home School',context),
                   _buildResumeCard(
-                      'Technical Mentor', '2022 - Present', 'Moringa School',context),
-                  _buildResumeCard('Disaster Management', '2012-2016',
-                      'Masinde Muliro University',context),
+                      'Game Designer', '2024', 'MindStorm Studios',context),
+                  _buildResumeCard('A Levels', '2018-2020',
+                      'BeaconHouse PECHs',context),
                   _buildResumeCard(
-                      'Website Development', '2021-2022', 'Village 2 Nation',context),
+                      'Social Internship', '2023', 'Special Olympics Pakistan',context),
                   _buildResumeCard(
-                      'Software Development', '2020-2021', 'Moringa School',context),
+                      'BSCS', '2020-2024', 'IBA',context),
                   _buildResumeCard(
-                      'Technical Mentor', '2022 - Present', 'Moringa School',context),
-                  _buildResumeCard('Disaster Management', '2012-2016',
-                      'Masinde Muliro University',context),
-                  _buildResumeCard(
-                      'Website Development', '2021-2022', 'Village 2 Nation',context),
-                  _buildResumeCard(
-                      'Software Development', '2020-2021', 'Moringa School',context),
-                  _buildResumeCard(
-                      'Technical Mentor', '2022 - Present', 'Moringa School',context),
-                  _buildResumeCard('Disaster Management', '2012-2016',
-                      'Masinde Muliro University',context),
-                  _buildResumeCard(
-                      'Website Development', '2021-2022', 'Village 2 Nation',context),
+                      '', '', '',context),
                 ],
               ),
             ),

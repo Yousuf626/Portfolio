@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:video_player/video_player.dart';
 
 class work_gridvalues extends StatelessWidget {
   const work_gridvalues({super.key});
@@ -6,71 +7,130 @@ class work_gridvalues extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-            child: Container(
-              height: MediaQuery.of(context).size.height * 0.7, // Adjustable based on your need
-              child: GridView.count(
-                crossAxisCount: 2,
-                childAspectRatio: 1.3, // Adjust the aspect ratio as needed
-                children: <Widget>[
-                   _buildResumeCard(
-                      'MedQR','profile.jpg',context),
-                  _buildResumeCard(
-                      'Technical Mentor','pixel.jpg',context),
-                ],
-              ),
-            ),
-          );
+      child: Container(
+        height: MediaQuery.of(context).size.height * 0.7,
+        child: GridView.count(
+          crossAxisCount: 2,
+          childAspectRatio: 1.3,
+          children: <Widget>[
+            _buildResumeCard('MedQR', 'medqr.jpg', context, 'assets/medqrvid.mp4'),
+            _buildResumeCard('Jumping Jam', 'jumper-jam.jpg', context, 'assets/jj.mp4'),
+          ],
+        ),
+      ),
+    );
   }
 }
 
-Widget _buildResumeCard(String title, String imageName, BuildContext context) {
+Widget _buildResumeCard(String title, String imageName, BuildContext context, String videoPath) {
   double screenWidth = MediaQuery.of(context).size.width;
   double screenHeight = MediaQuery.of(context).size.height;
 
-  // Calculate padding and margin dynamically based on screen size
-  double dynamicMargin = screenWidth * 0.015; // Reduced margin
-  double dynamicPadding = screenHeight * 0.012; // Reduced padding
+  double dynamicMargin = screenWidth * 0.015;
+  double dynamicPadding = screenHeight * 0.012;
 
-  // Constructing the image path dynamically
-  // String imagePath = 'assets/$imageName'; // Assuming images are stored in assets folder
+  String imagePath = 'assets/$imageName';
 
-  return Card(
-    margin: EdgeInsets.all(dynamicMargin),
-    child: Padding(
-      padding: EdgeInsets.all(dynamicPadding),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          // Image widget
-          Container(
-            decoration: BoxDecoration(
-        border: Border.all(
-          color: Colors.black, // Set border color to black
-          width: 1.0, // Set border width
+  return GestureDetector(
+    onTap: () {
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return VideoDialog(videoPath: videoPath);
+        },
+      );
+    },
+    child: Card(
+      margin: EdgeInsets.all(dynamicMargin),
+      child: Padding(
+        padding: EdgeInsets.all(dynamicPadding),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: Colors.black,
+                  width: 1.0,
+                ),
+              ),
+              child: Image.asset(
+                imagePath,
+                width: double.infinity,
+                height: screenHeight * 0.23,
+                fit: BoxFit.fill,
+              ),
+            ),
+            SizedBox(height: screenHeight * 0.035),
+            Text(
+              title,
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: screenHeight * 0.035,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
         ),
-      ),
-            child: Image.asset(
-              '{imageName}',
-              // width: screenWidth * 0.4, // Adjust image size as needed
-              width: double.infinity, // Adjust image size as needed
-              height: screenHeight * 0.23,
-              fit: BoxFit.fill, // Adjust the fit as needed
-            ),
-          ),
-          SizedBox(height: screenHeight * 0.035), // Adjust space between image and text
-          // Project title
-          Text(
-            title,
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: screenHeight * 0.035, // Adjusted for visibility
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          
-        ],
       ),
     ),
   );
+}
+
+class VideoDialog extends StatefulWidget {
+  final String videoPath;
+
+  const VideoDialog({required this.videoPath});
+
+  @override
+  _VideoDialogState createState() => _VideoDialogState();
+}
+
+class _VideoDialogState extends State<VideoDialog> {
+  late VideoPlayerController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = VideoPlayerController.asset(widget.videoPath)
+      ..initialize().then((_) {
+        setState(() {
+          _controller.play();
+        });
+      });
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (!_controller.value.isInitialized) {
+      return Dialog(
+        child: Container(
+          width: 100.0,
+          height: 100.0,
+          child: Center(child: CircularProgressIndicator()),
+        ),
+      );
+    }
+
+    final double videoWidth = _controller.value.size.width;
+    final double videoHeight = _controller.value.size.height;
+
+    return Dialog(
+      child: Container(
+        width: videoWidth,
+        height: videoHeight,
+        child: AspectRatio(
+          aspectRatio: _controller.value.aspectRatio,
+          child: VideoPlayer(_controller),
+        ),
+      ),
+    );
+  }
 }

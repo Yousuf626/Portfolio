@@ -28,17 +28,17 @@ class MainBox_Widget extends StatelessWidget {
     List<ContentItem> items = [
       ContentItem(
         heading: 'Web Development',
-        content: "As a developer, I find myself most captivated by the power and flexibility of NEXT.js. I'm always eager to dive into new projects that leverage NEXT.js and discover innovative ways to create fast, scalable, and user-friendly applications.",
+        content: "My passion lies in exploring the limitless possibilities of React.js, Node.js, and Flutter Web. I thrive on taking on new challenges, using these versatile technologies to build efficient, scalable, and intuitive applications that deliver exceptional user experiences.",
         icon: Icons.code_outlined,
       ),
       ContentItem(
         heading: 'App Development',
-        content: "With a focus on user-centric design and cutting-edge technologies, I thrive on building intuitive and efficient apps that make a positive impact on people's lives. Let's turn ideas into reality and shape the future together.",
+        content: "With a passion for user-focused design and the latest in technology, I excel at crafting intuitive and efficient apps using Flutter. I’m driven to create impactful solutions that enhance lives. Let's bring ideas to life and shape the future together.",
         icon: Icons.camera_alt_outlined,
       ),
       ContentItem(
-        heading: 'UI/UX Designing',
-        content: "Crafting visually appealing and intuitive user interfaces that offer a delightful user experience is something I'm truly fanatic about.",
+        heading: 'Game Development',
+        content: "I'm truly passionate about designing visually stunning and intuitive game interfaces that provide an immersive and enjoyable player experience. Crafting these elements in Godot is where my creativity truly comes to life.",
         icon: Icons.design_services,
       ),
       ContentItem(
@@ -63,7 +63,7 @@ class MainBox_Widget extends StatelessWidget {
               case NavBarItem.Work:
               content = WorkWidget(width: this.width!);
             default:
-              content = Text("No content selected");
+              content = Text("In Development");
           }
 
           return Container(
